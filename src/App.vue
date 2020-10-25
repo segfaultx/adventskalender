@@ -3,16 +3,16 @@
 </template>
 
 <script lang="ts">
-import "bootstrap/dist/css/bootstrap.min.css";
-import { defineComponent } from "vue";
-import DoorContainer from "@/components/DoorContainer.vue";
+import "bootstrap/dist/css/bootstrap.min.css"
+import { defineComponent } from "vue"
+import DoorContainer from "@/components/DoorContainer.vue"
 
 export default defineComponent({
   name: "App",
   components: {
     DoorContainer
   }
-});
+})
 </script>
 
 <style>

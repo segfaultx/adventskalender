@@ -9,30 +9,30 @@
 
 <script lang="ts">
 import {defineComponent, ref} from "vue"
-import IDoorItem from "@/components/DoorComponent/IDoorItem"
+import DoorItem from "@/components/DoorComponent/DoorItem"
 
 interface Props {
-  doorItem: IDoorItem
+  doorItem: DoorItem
 }
 
 export default defineComponent({
   name: "DoorComponent",
   props: {
     doorItem: {
-      type: Object as () => IDoorItem,
+      type: Object as () => DoorItem,
       default: {day: 25, content: "hi"}
     }
   },
   setup(props: Props) {
-    const show = ref(false);
+    const show = ref(false)
 
     function isOk(): boolean {
-      return props.doorItem.day === new Date().getDate();
+      return props.doorItem.day <= new Date().getDate()
     }
 
-    return {show, isOk};
+    return {show, isOk}
   }
-});
+})
 </script>
 
 <style scoped>

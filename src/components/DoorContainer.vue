@@ -5,7 +5,7 @@
         A
       </div>
       <div class="col-md-3">
-        <DoorComponent v-bind:doorItem="this.doorItem" />
+        <DoorComponent :door-item="doorItem"/>
       </div>
       <div class="col-md-3">
         C
@@ -15,9 +15,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import DoorComponent from "@/components/DoorComponent/DoorComponent.vue";
-import IDoorItem from "@/components/DoorComponent/IDoorItem";
+import {defineComponent} from "vue"
+import DoorComponent from "@/components/DoorComponent/DoorComponent.vue"
+import DoorItem from "@/components/DoorComponent/DoorItem"
 
 export default defineComponent({
   name: "DoorContainer",
@@ -26,12 +26,12 @@ export default defineComponent({
   },
   props: {
     doorItem: {
-      type: Object as () => IDoorItem,
+      type: Object as () => DoorItem,
       required: false,
-      default: { day: 25, content: "blup" }
+      default: {day: 25, content: "blup"}
     }
   }
-});
+})
 </script>
 
 <style scoped>
