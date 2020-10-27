@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import DoorItem from "../doorComponent/DoorItem"
-import DoorComponent from "@/components/doorComponent/DoorComponent.vue"
+import DoorItem from "../door/DoorItem"
+import DoorComponent from "@/components/door/DoorComponent.vue"
 
 export default defineComponent({
       name: "DoorRow",
@@ -22,5 +22,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
+.row {
+}
 </style>

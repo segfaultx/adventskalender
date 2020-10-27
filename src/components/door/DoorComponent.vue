@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import {defineComponent, ref} from "vue"
-import DoorItem from "@/components/doorComponent/DoorItem"
+import DoorItem from "@/components/door/DoorItem"
 import modal from "@/components/modal/ModalComponent.vue"
 
 interface Props {
@@ -29,7 +29,7 @@ export default defineComponent({
   props: {
     doorItem: {
       type: Object as () => DoorItem,
-      default: {day: 25, content: "hi"}
+      default: {day: 25, content: "hi", isDummy: false}
     }
   },
   setup(props: Props) {
