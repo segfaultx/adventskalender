@@ -3,8 +3,8 @@
     <div v-if="!show" class="flipcard_front">
       {{ this.doorItem.day }}
     </div>
-    <div v-if="show" class="flipcard_back" @click="showModal">{
-      { this.doorItem.content }}
+    <div v-if="show" class="flipcard_back" @click="showModal">
+      {{ this.doorItem.content }}
     </div>
     <modal v-show="isModalVisible"
            :door-number="this.doorItem.day"
