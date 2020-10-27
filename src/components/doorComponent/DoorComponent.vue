@@ -36,7 +36,7 @@ export default defineComponent({
     const show = ref(false)
     const isModalVisible = ref(false)
 
-    function isOk(): boolean {
+    function canOpenDoor(): boolean {
       return props.doorItem.day <= new Date().getDate()
     }
 
@@ -48,7 +48,7 @@ export default defineComponent({
       isModalVisible.value = false
     }
 
-    return {show, isModalVisible, isOk, showModal, closeModal}
+    return {show, isModalVisible, isOk: canOpenDoor, showModal, closeModal}
   }
 })
 </script>
