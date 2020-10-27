@@ -1,9 +1,9 @@
 <template>
   <div @click="show = isOk()">
-    <div v-if="!show" class="flipcard_front">
-      {{ this.doorItem.day }}
+    <div v-if="!show" class="door door_front">
+          {{ this.doorItem.day }}
     </div>
-    <div v-if="show" class="flipcard_back" @click="showModal">
+    <div v-if="show" class="door door_back" @click="showModal">
       {{ this.doorItem.content }}
     </div>
     <modal v-show="isModalVisible"
@@ -54,11 +54,23 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.flipcard_front {
+.door {
+  width: 10vw;
+  height: 10vh;
+  max-height: 10vh;
+  max-width: 10vw;
+}
+
+.door_front {
+  font-family: "ChristmasFont", serif;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: red;
 }
 
-.flipcard_back {
+.door_back {
   background-color: green;
 }
 </style>

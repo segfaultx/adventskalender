@@ -17,7 +17,11 @@ export default defineComponent({
 
 <style>
 body {
-  background-image: url("~@/assets/background.jpg");
+  background: url("~@/assets/background.jpg") no-repeat center center fixed;
   background-size: cover;
+}
+@font-face {
+  font-family: 'ChristmasFont';
+  src: local("ChristmasFont"), url('~@/assets/Reindeer Christmas - Personal Use.otf') format("opentype");
 }
 </style>
