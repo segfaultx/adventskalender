@@ -1,34 +1,24 @@
 <template>
   <div class="container bgcolor">
-    <div class="row">
-      <div class="col-md-3">
-        A
-      </div>
-      <div class="col-md-3">
-        <DoorComponent :door-item="doorItem"/>
-      </div>
-      <div class="col-md-3">
-        C
-      </div>
-    </div>
+    <DoorRow :door-items="[doorItem, doorItem, {...doorItem, isDummy: true}, doorItem, doorItem, doorItem]"/>
   </div>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue"
-import DoorComponent from "@/components/doorComponent/DoorComponent.vue"
+import DoorRow from "@/components/doorRowComponent/DoorRowComponent.vue"
 import DoorItem from "@/components/doorComponent/DoorItem"
 
 export default defineComponent({
   name: "DoorContainer",
   components: {
-    DoorComponent
+    DoorRow
   },
   props: {
     doorItem: {
       type: Object as () => DoorItem,
       required: false,
-      default: {day: 25, content: "blup"}
+      default: {day: 25, content: "blup", isDummy: false}
     }
   }
 })
@@ -36,6 +26,5 @@ export default defineComponent({
 
 <style scoped>
 .bgcolor {
-  background-color: orange;
 }
 </style>

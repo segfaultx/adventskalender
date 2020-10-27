@@ -55,19 +55,22 @@ export default defineComponent({
 
 <style scoped>
 .door {
-  width: 10vw;
-  height: 10vh;
-  max-height: 10vh;
-  max-width: 10vw;
+  width: 7vw;
+  height: 7vh;
+  max-height: 7vh;
+  max-width: 7vw;
 }
 
 .door_front {
   font-family: "ChristmasFont", serif;
   font-size: 4em;
+  color: darkred;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  border: darkred 3px solid;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .75);
 }
 
 .door_back {
