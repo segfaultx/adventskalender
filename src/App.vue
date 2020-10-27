@@ -1,5 +1,5 @@
 <template>
-  <DoorContainer />
+  <DoorContainer/>
 </template>
 
 <script lang="ts">

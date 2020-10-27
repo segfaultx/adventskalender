@@ -16,8 +16,8 @@
 
 <script lang="ts">
 import {defineComponent} from "vue"
-import DoorComponent from "@/components/DoorComponent/DoorComponent.vue"
-import DoorItem from "@/components/DoorComponent/DoorItem"
+import DoorComponent from "@/components/doorComponent/DoorComponent.vue"
+import DoorItem from "@/components/doorComponent/DoorItem"
 
 export default defineComponent({
   name: "DoorContainer",

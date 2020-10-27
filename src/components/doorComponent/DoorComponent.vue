@@ -1,11 +1,16 @@
 <template>
   <div @click="show = isOk()">
     <div v-if="!show" class="flipcard_front">
-      This is the Front
+      {{ this.doorItem.day }}
     </div>
-    <div v-if="show" class="flipcard_back" @click="showModal">{{ this.doorItem.content }}</div>
-    <modal v-show="isModalVisible" :door-number="this.doorItem.day" :text-details="this.doorItem.content"
-           @close="closeModal"/>
+    <div v-if="show" class="flipcard_back" @click="showModal">{
+      { this.doorItem.content }}
+    </div>
+    <modal v-show="isModalVisible"
+           :door-number="this.doorItem.day"
+           :text-details="this.doorItem.content"
+           @close="closeModal"
+    />
   </div>
 </template>
 
