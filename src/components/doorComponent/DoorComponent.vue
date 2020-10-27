@@ -3,13 +3,16 @@
     <div v-if="!show" class="flipcard_front">
       This is the Front
     </div>
-    <div v-if="show" class="flipcard_back">{{ doorItem.content }}</div>
+    <div v-if="show" class="flipcard_back" @click="showModal">{{ this.doorItem.content }}</div>
+    <modal v-show="isModalVisible" :door-number="this.doorItem.day" :text-details="this.doorItem.content"
+           @close="closeModal"/>
   </div>
 </template>
 
 <script lang="ts">
 import {defineComponent, ref} from "vue"
-import DoorItem from "@/components/DoorComponent/DoorItem"
+import DoorItem from "@/components/doorComponent/DoorItem"
+import modal from "@/components/modal/ModalComponent.vue"
 
 interface Props {
   doorItem: DoorItem
@@ -17,6 +20,7 @@ interface Props {
 
 export default defineComponent({
   name: "DoorComponent",
+  components: {modal},
   props: {
     doorItem: {
       type: Object as () => DoorItem,
@@ -25,12 +29,21 @@ export default defineComponent({
   },
   setup(props: Props) {
     const show = ref(false)
+    const isModalVisible = ref(false)
 
     function isOk(): boolean {
       return props.doorItem.day <= new Date().getDate()
     }
 
-    return {show, isOk}
+    function showModal() {
+      isModalVisible.value = true
+    }
+
+    function closeModal() {
+      isModalVisible.value = false
+    }
+
+    return {show, isModalVisible, isOk, showModal, closeModal}
   }
 })
 </script>
