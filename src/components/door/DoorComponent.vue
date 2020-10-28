@@ -42,7 +42,7 @@ export default defineComponent({
 
     function canOpenDoor(): void {
       if (props.doorItem.day <= new Date().getDate()){
-        const soundEffect = new Audio(require("@/assets/door_squeak.mp3"))
+        const soundEffect = new Audio(require("@/assets/christmas_bells.mp3"))
         soundEffect.onended = openDoor
         soundEffect.play()
       }
