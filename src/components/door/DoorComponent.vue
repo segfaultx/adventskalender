@@ -1,5 +1,5 @@
 <template>
-  <div @click="show = isOk()">
+  <div @click="canOpenDoor">
     <div v-if="!show" class="door door_front">
           {{ this.doorItem.day }}
     </div>
@@ -36,8 +36,16 @@ export default defineComponent({
     const show = ref(false)
     const isModalVisible = ref(false)
 
-    function canOpenDoor(): boolean {
-      return props.doorItem.day <= new Date().getDate()
+    function openDoor(): void {
+      show.value = true
+    }
+
+    function canOpenDoor(): void {
+      if (props.doorItem.day <= new Date().getDate()){
+        const soundEffect = new Audio(require("@/assets/door_squeak.mp3"))
+        soundEffect.onended = openDoor
+        soundEffect.play()
+      }
     }
 
     function showModal() {
@@ -48,7 +56,7 @@ export default defineComponent({
       isModalVisible.value = false
     }
 
-    return {show, isModalVisible, isOk: canOpenDoor, showModal, closeModal}
+    return {show, isModalVisible, canOpenDoor, showModal, closeModal}
   }
 })
 </script>
