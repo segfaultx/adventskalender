@@ -33,9 +33,9 @@ export default defineComponent({
     }
   },
   setup(props: Props) {
-    const show = ref(false)
-    const isModalVisible = ref(false)
-    const canClick = ref(true)
+    const show = ref<boolean>(false)
+    const isModalVisible = ref<boolean>(false)
+    const canClick = ref<boolean>(true)
 
     function openDoor(): void {
       show.value = true

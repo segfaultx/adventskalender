@@ -11,9 +11,7 @@ import calendarContent from "@/data/calendarContent.json"
 
 export default defineComponent({
   name: "App",
-  components: {
-    DoorContainer
-  },
+  components: {DoorContainer},
   props: {
     basicCalendarItems: {
       type: Object as () => CalendarItems,

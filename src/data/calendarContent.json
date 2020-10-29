@@ -1,6 +1,6 @@
 [[
     {"day": 300, "content": "blup", "isDummy": false},
-    {"day": 25, "content": "blup", "isDummy": true},
+    null,
     {"day": 25, "content": "blup", "isDummy": false},
     {"day": 25, "content": "blup", "isDummy": false},
     {"day": 25, "content": "blup", "isDummy": false},
@@ -8,38 +8,38 @@
   [
     {"day": 25, "content": "blup", "isDummy": false},
     {"day": 25, "content": "blup", "isDummy": false},
-    {"day": 25, "content": "blup", "isDummy": true},
-    {"day": 25, "content": "blup", "isDummy": true},
+    null,
+    null,
     {"day": 25, "content": "blup", "isDummy": false},
     {"day": 25, "content": "blup", "isDummy": false}],
   [
       {"day": 25, "content": "blup", "isDummy": false},
-      {"day": 25, "content": "blup", "isDummy": true},
-      {"day": 25, "content": "blup", "isDummy": true},
+      null,
+      null,
       {"day": 25, "content": "blup", "isDummy": false},
-      {"day": 25, "content": "blup", "isDummy": true},
+      null,
       {"day": 25, "content": "blup", "isDummy": false}
   ],
   [
-      {"day": 25, "content": "blup", "isDummy": true},
+      null,
       {"day": 25, "content": "blup", "isDummy": false},
       {"day": 25, "content": "blup", "isDummy": false},
-      {"day": 25, "content": "blup", "isDummy": true},
+      null,
       {"day": 25, "content": "blup", "isDummy": false},
       {"day": 25, "content": "blup", "isDummy": false}],
   [
       {"day": 25, "content": "blup", "isDummy": false},
       {"day": 25, "content": "blup", "isDummy": false},
-      {"day": 25, "content": "blup", "isDummy": true},
+      null,
       {"day": 25, "content": "blup", "isDummy": false},
       {"day": 25, "content": "blup", "isDummy": false},
-      {"day": 25, "content": "blup", "isDummy": true}],
+      null],
   [
-    {"day": 25, "content": "blup", "isDummy": true},
+    null,
     {"day": 25, "content": "blup", "isDummy": false},
     {"day": 25, "content": "blup", "isDummy": false},
     {"day": 25, "content": "blup", "isDummy": false},
-    {"day": 25, "content": "blup", "isDummy": true},
+    null,
     {"day": 25, "content": "blup", "isDummy": false}
   ]
 ]

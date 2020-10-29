@@ -1,22 +1,22 @@
 <template>
-<div class="row">
-  <div class="col" v-for="item in this.doorItems" :key="item.day">
-    <DoorComponent v-if="!item.isDummy" :door-item="item"/>
+  <div class="row">
+    <div class="col" v-for="(item, index) in this.doorItems" :key="index">
+      <DoorComponent v-if="item != null" :door-item="item"/>
+    </div>
   </div>
-</div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue"
+import {defineComponent} from "vue"
 import DoorItem from "../door/DoorItem"
 import DoorComponent from "@/components/door/DoorComponent.vue"
 
 export default defineComponent({
-      name: "DoorRow",
-      components: {DoorComponent},
-      props: {
-        doorItems: Object as () => DoorItem[]
-      }
+  name: "DoorRow",
+  components: {DoorComponent},
+  props: {
+    doorItems: Object as () => DoorItem[]
+  }
 })
 
 </script>

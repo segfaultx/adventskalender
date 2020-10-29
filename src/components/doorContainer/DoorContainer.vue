@@ -1,6 +1,6 @@
 <template>
   <div class="container bgcolor">
-    <DoorRow v-for="items in calendarItems" :key="items.index" :door-items="items"/>
+    <DoorRow v-for="(items, index) in calendarItems" :key="index" :door-items="items"/>
   </div>
 </template>
 
@@ -11,9 +11,7 @@ import CalendarItems from "@/components/doorContainer/CalendarItems"
 
 export default defineComponent({
   name: "DoorContainer",
-  components: {
-    DoorRow
-  },
+  components: {DoorRow},
   props: {
     calendarItems: {
       type: Object as () => CalendarItems,
