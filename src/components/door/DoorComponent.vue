@@ -1,7 +1,7 @@
 <template>
   <div @click="canOpenDoor">
     <div v-if="!show" class="door door_front">
-          {{ this.doorItem.day }}
+      {{ this.doorItem.day }}
     </div>
     <div v-if="show" class="door door_back" @click="showModal">
       {{ this.doorItem.content }}
@@ -35,16 +35,24 @@ export default defineComponent({
   setup(props: Props) {
     const show = ref(false)
     const isModalVisible = ref(false)
+    const canClick = ref(true)
 
     function openDoor(): void {
       show.value = true
     }
 
     function canOpenDoor(): void {
-      if (props.doorItem.day <= new Date().getDate()){
-        const soundEffect = new Audio(require("@/assets/christmas_bells.mp3"))
-        soundEffect.onended = openDoor
-        soundEffect.play()
+      if (canClick.value) {
+        canClick.value = false
+        if (props.doorItem.day <= new Date().getDate()) {
+          const soundEffect = new Audio(require("@/assets/christmas_bells.mp3"))
+          soundEffect.onended = openDoor
+          soundEffect.play()
+        } else {
+          const soundEffect = new Audio(require("@/assets/no.mp3"))
+          soundEffect.play()
+          canClick.value = true
+        }
       }
     }
 
@@ -67,6 +75,10 @@ export default defineComponent({
   height: 7vh;
   max-height: 7vh;
   max-width: 7vw;
+}
+
+.door:hover {
+  cursor: pointer;
 }
 
 .door_front {
