@@ -1,7 +1,6 @@
 interface DoorItem {
     day: number,
-    content: string,
-    isDummy: boolean
+    content: string
 }
 
 export default DoorItem
