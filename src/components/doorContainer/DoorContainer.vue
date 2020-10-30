@@ -1,6 +1,9 @@
 <template>
-  <div class="container bgcolor">
-    <DoorRow v-for="(items, index) in calendarItems" :key="index" :door-items="items"/>
+  <div class="container">
+    <div class="row header-row">{{title}}</div>
+    <div class="container bgcolor">
+      <DoorRow v-for="(items, index) in calendarItems" :key="index" :door-items="items"/>
+    </div>
   </div>
 </template>
 
@@ -16,6 +19,10 @@ export default defineComponent({
     calendarItems: {
       type: Object as () => CalendarItems,
       required: true
+    },
+    title: {
+      type: String,
+      required: true
     }
   }
 })
@@ -24,8 +31,13 @@ export default defineComponent({
 <style scoped>
 .bgcolor {
   display: flex;
-  height: 100vh;
   flex-direction: column;
+}
+.header-row {
+  font-family: "ChristmasFont", serif;
+  font-size: 10em;
+  color: white;
+  display: flex;
   justify-content: center;
 }
 </style>

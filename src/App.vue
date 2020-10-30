@@ -1,5 +1,5 @@
 <template>
-  <DoorContainer :calendar-items="basicCalendarItems"/>
+  <DoorContainer :calendar-items="basicCalendarItems" :title="appConfig.title"/>
 </template>
 
 <script lang="ts">
@@ -8,6 +8,11 @@ import {defineComponent} from "vue"
 import DoorContainer from "@/components/doorContainer/DoorContainer.vue"
 import CalendarItems from "@/components/doorContainer/CalendarItems"
 import calendarContent from "@/data/calendarContent.json"
+import appConfig from "@/data/appConfig.json"
+
+interface AppConfig {
+  title: string
+}
 
 export default defineComponent({
   name: "App",
@@ -16,7 +21,10 @@ export default defineComponent({
     basicCalendarItems: {
       type: Object as () => CalendarItems,
       default: calendarContent
-
+    },
+    appConfig: {
+      type: Object as () => AppConfig,
+      default: appConfig
     }
   }
 })
