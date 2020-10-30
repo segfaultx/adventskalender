@@ -1,5 +1,5 @@
 <template>
-  <div @click="canOpenDoor" class="door-container">
+  <div @click="canOpenDoor" class="door-container" id="door-wrapper">
     <div v-if="!show" class="door door_front" id="door-front">
       {{ this.doorItem.day }}
     </div>
@@ -18,6 +18,7 @@
 import {defineComponent, ref} from "vue"
 import DoorItem from "@/components/door/DoorItem"
 import modal from "@/components/modal/ModalComponent.vue"
+import useOpenDoor from "@/components/door/doorFunctions"
 
 interface Props {
   doorItem: DoorItem
@@ -37,28 +38,7 @@ export default defineComponent({
     const show = ref<boolean>(false)
     const isModalVisible = ref<boolean>(false)
     const canClick = ref<boolean>(true)
-
-    function openDoor(): void {
-      show.value = true
-      emit("update")
-    }
-
-    function canOpenDoor(): void {
-      if (canClick.value) {
-        canClick.value = false
-        if (props.doorItem.day <= new Date().getDate()) {
-          const soundEffect = new Audio(require("@/assets/christmas_bells.mp3"))
-          soundEffect.onended = openDoor
-          soundEffect.play()
-
-        } else {
-          const soundEffect = new Audio(require("@/assets/no.mp3"))
-          soundEffect.play()
-          canClick.value = true
-        }
-      }
-    }
-
+    const canOpenDoor = useOpenDoor(show, canClick, props.doorItem.day, emit)
     function showModal() {
       isModalVisible.value = true
     }
