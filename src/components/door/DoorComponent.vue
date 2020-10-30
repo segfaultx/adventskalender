@@ -1,5 +1,5 @@
 <template>
-  <div @click="canOpenDoor">
+  <div @click="canOpenDoor" class="door-container">
     <div v-if="!show" class="door door_front">
       {{ this.doorItem.day }}
     </div>
@@ -95,5 +95,9 @@ export default defineComponent({
 
 .door_back {
   background-color: green;
+}
+
+.door-container {
+  margin-top: 1em;
 }
 </style>
