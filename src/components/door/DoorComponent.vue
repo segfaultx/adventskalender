@@ -32,13 +32,15 @@ export default defineComponent({
       default: {day: 25, content: "hi", isDummy: false}
     }
   },
-  setup(props: Props) {
+  emits: ["update"],
+  setup(props: Props, {emit}) {
     const show = ref<boolean>(false)
     const isModalVisible = ref<boolean>(false)
     const canClick = ref<boolean>(true)
 
     function openDoor(): void {
       show.value = true
+      emit("update")
     }
 
     function canOpenDoor(): void {
@@ -48,6 +50,7 @@ export default defineComponent({
           const soundEffect = new Audio(require("@/assets/christmas_bells.mp3"))
           soundEffect.onended = openDoor
           soundEffect.play()
+
         } else {
           const soundEffect = new Audio(require("@/assets/no.mp3"))
           soundEffect.play()

@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col" v-for="(item, index) in this.doorItems" :key="index">
-      <DoorComponent v-if="item != null" :door-item="item"/>
+      <DoorComponent v-if="item != null" :door-item="item" @update="handleUpdate"/>
     </div>
   </div>
 </template>
@@ -16,6 +16,13 @@ export default defineComponent({
   components: {DoorComponent},
   props: {
     doorItems: Object as () => DoorItem[]
+  },
+  emits: ["update"],
+  setup(_, {emit}){
+    function handleUpdate(){
+      emit("update")
+    }
+    return {handleUpdate}
   }
 })
 

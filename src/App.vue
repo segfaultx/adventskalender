@@ -1,5 +1,5 @@
 <template>
-  <DoorContainer :calendar-items="basicCalendarItems" :title="appConfig.title"/>
+  <DoorContainer :calendar-items="basicCalendarItems" :title="appConfig.title" @update="handleUpdate"/>
 </template>
 
 <script lang="ts">
@@ -14,6 +14,11 @@ interface AppConfig {
   title: string
 }
 
+interface AppProps {
+  basicCalendarItems: CalendarItems,
+  appConfig: AppConfig
+}
+
 export default defineComponent({
   name: "App",
   components: {DoorContainer},
@@ -26,6 +31,12 @@ export default defineComponent({
       type: Object as () => AppConfig,
       default: appConfig
     }
+  },
+  setup(props: AppProps){
+    function handleUpdate(){
+      console.log(props.basicCalendarItems)
+    }
+    return {handleUpdate}
   }
 })
 </script>

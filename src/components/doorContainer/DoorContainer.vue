@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row header-row">{{title}}</div>
     <div class="container bgcolor">
-      <DoorRow v-for="(items, index) in calendarItems" :key="index" :door-items="items"/>
+      <DoorRow v-for="(items, index) in calendarItems" :key="index" :door-items="items" @update="handleEvent"/>
     </div>
   </div>
 </template>
@@ -24,6 +24,13 @@ export default defineComponent({
       type: String,
       required: true
     }
+  },
+  emits: ["update"],
+  setup(_, {emit}){
+    function handleEvent(): void {
+      emit("update")
+    }
+    return {handleEvent}
   }
 })
 </script>
