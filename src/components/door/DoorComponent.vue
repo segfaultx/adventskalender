@@ -1,6 +1,6 @@
 <template>
   <div @click="canOpenDoor" class="door-container">
-    <div v-if="!show" class="door door_front">
+    <div v-if="!show" class="door door_front" id="door-front">
       {{ this.doorItem.day }}
     </div>
     <div v-if="show" class="door door_back" @click="showModal">
