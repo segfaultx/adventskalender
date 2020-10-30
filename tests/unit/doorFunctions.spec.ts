@@ -16,10 +16,13 @@ describe("DoorFunctions",  () => {
         expect(boolRef.value).toBeTruthy()
         expect(emitMock).toHaveBeenCalled()
     })
-    it("function shouldnt change boolean", done => {
+    it("function shouldnt change boolean", async () => {
         const boolRef = ref(false)
         const day = new Date().getDate() + 1
         const emitMock = jest.fn()
         const fn = useOpenDoor(boolRef, boolRef, day, emitMock)
+        await fn()
+        expect(boolRef.value).toBeFalsy()
+        expect(emitMock).not.toHaveBeenCalled()
     })
 })
