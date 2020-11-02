@@ -103,7 +103,7 @@ export default defineComponent({
   position: absolute;
   z-index: 1;
   bottom: 90%;
-  left: 43%;
+  left: 33%;
   margin-left: -60px;
 
   /* Fade in tooltip */
