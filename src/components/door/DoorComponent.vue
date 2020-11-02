@@ -3,8 +3,12 @@
     <div v-if="!show" class="door door_front" id="door-front">
       {{ this.doorItem.day }}
     </div>
-    <div v-if="show" class="door door_back" @click="showModal">
-      {{ this.doorItem.content }}
+    <div v-if="show" class="door door_back"
+         :style="{background: 'url(./door_bgs/' + this.doorItem.backgroundImage + ') no-repeat', 'background-size': '100%' }"
+         @click="showModal">
+      <span class="tooltiptext">
+              Click Me!
+      </span>
     </div>
     <modal v-show="isModalVisible"
            :door-number="this.doorItem.day"
@@ -40,6 +44,7 @@ export default defineComponent({
     const isModalVisible = ref<boolean>(false)
     const canClick = ref<boolean>(true)
     const canOpenDoor = useOpenDoor(show, canClick, props.doorItem.day, emit)
+
     function showModal() {
       isModalVisible.value = true
     }
@@ -84,4 +89,44 @@ export default defineComponent({
 .door-container {
   margin-top: 1em;
 }
+
+.door_back .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 90%;
+  left: 43%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.door_back .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.door_back:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
 </style>
