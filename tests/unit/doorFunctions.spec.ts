@@ -5,13 +5,7 @@ window.HTMLMediaElement.prototype.play = async () => {
     dispatchEvent(new Event("ended"))
 }
 
-function sleep(ms: number): Promise<Promise<void>> {
-    return new Promise<Promise<void>>(() => setTimeout(() => {
-    }, ms))
-}
-
 describe("DoorFunctions", () => {
-    jest.disableAutomock()
     it("function should change boolean to true", done => {
         const boolRef = ref(false)
         const canClick = ref(true)
