@@ -9,6 +9,7 @@
     <modal v-show="isModalVisible"
            :door-number="this.doorItem.day"
            :text-details="this.doorItem.content"
+           :voucher-name="this.doorItem.voucherName"
            @close="closeModal"
     />
   </div>

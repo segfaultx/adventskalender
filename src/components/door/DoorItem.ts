@@ -1,6 +1,7 @@
 interface DoorItem {
     day: number,
-    content: string
+    content: string,
+    voucherName?: string
 }
 
 export default DoorItem

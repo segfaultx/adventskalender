@@ -1,37 +1,43 @@
 <template>
   <transition name="modal-fade">
-  <div class="modal-backdrop">
-    <div class="modal">
-      <header class="modal-header">
-        <slot name="header">
-          Details Türchen Nr.: {{ doorNumber }}
+    <div class="modal-backdrop">
+      <div class="modal">
+        <header class="modal-header">
+          <slot name="header">
+            Details Türchen Nr.: {{ doorNumber }}
 
-          <button
-              type="button"
-              class="btn-close"
-              @click="close">
-            x
-          </button>
-        </slot>
-      </header>
-      <section class="modal-body">
-        <slot name="body">
-          {{textDetails}}
-        </slot>
-      </section>
-      <footer class="modal-footer">
-        <slot name="footer">
-          <button
-              type="button"
-              class="btn-red"
-              @click="close"
-          >
-            Schließen
-          </button>
-        </slot>
-      </footer>
+            <button
+                type="button"
+                class="btn-close"
+                @click="close">
+              x
+            </button>
+          </slot>
+        </header>
+        <section class="modal-body">
+          <slot name="body">
+            {{ textDetails }}
+          </slot>
+
+          <br/>
+
+          <a v-if="voucherName" :href="/gutscheine/ + voucherName" :download="voucherName">
+            <span>Download </span>
+          </a>
+        </section>
+        <footer class="modal-footer">
+          <slot name="footer">
+            <button
+                type="button"
+                class="btn-red"
+                @click="close"
+            >
+              Schließen
+            </button>
+          </slot>
+        </footer>
+      </div>
     </div>
-  </div>
   </transition>
 </template>
 
@@ -40,14 +46,20 @@ import {defineComponent} from "vue"
 
 interface Props {
   doorNumber: number,
-  textDetails: string
+  textDetails: string,
+  voucherName: string
 }
 
 export default defineComponent({
   name: 'modal',
   props: {
     doorNumber: Number,
-    textDetails: String
+    textDetails: String,
+    voucherName: {
+      type: String,
+      default: null,
+      required: false
+    }
   },
   methods: {
     close(): void {
@@ -122,6 +134,7 @@ export default defineComponent({
   border: 1px solid darkred;
   border-radius: 2px;
 }
+
 .modal-fade-enter,
 .modal-fade-leave-active {
   opacity: 0;
