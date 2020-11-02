@@ -40,7 +40,7 @@
     {"day": 11, "content": "blup", "voucherName":  "gutschein_11.pdf"},
     null,
     {"day": 8, "content": "blup", "voucherName":  "gutschein_08.pdf"},
-    {"day": 1, "content": "blup"},
+    {"day": 1, "content": "blup", "backgroundImage": "door_01.jpg"},
     {"day": 14, "content": "blup", "voucherName":  "gutschein_14.pdf"}
   ]
 ]
