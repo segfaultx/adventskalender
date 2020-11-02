@@ -17,7 +17,8 @@ module.exports = {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     semi: [1, "never"],
-    "prettier/prettier": "off"
+    "prettier/prettier": "off",
+    "@typescript-eslint/ban-ts-ignore": "off"
   },
   overrides: [
     {

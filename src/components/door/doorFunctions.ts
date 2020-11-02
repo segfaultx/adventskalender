@@ -1,22 +1,26 @@
 import {Ref} from "@vue/reactivity"
+// @ts-ignore
+import christmasBellsSound from '@/assets/christmas_bells.mp3'
+// @ts-ignore
+import no from "@/assets/no.mp3"
 
-export default function useOpenDoor(show: Ref<boolean>, canClick: Ref<boolean>, day: number, emit: (event: "update", ...args: unknown[]) => void): () => void {
+export default function useOpenDoor(show: Ref<boolean>, canClick: Ref<boolean>, day: number, emit: (event: "update", ...args: unknown[]) => void): () => Promise<void> {
     function openDoor(): void {
         show.value = true
         emit("update", {})
     }
 
-    return function canOpenDoor(): void {
+    return async function canOpenDoor(): Promise<void> {
         if (canClick.value) {
             canClick.value = false
             if (day <= new Date().getDate()) {
-                const soundEffect = new Audio(require("../../assets/christmas_bells.mp3"))
+                const soundEffect = new Audio(christmasBellsSound)
                 soundEffect.onended = openDoor
-                soundEffect.play()
+                await soundEffect.play()
 
             } else {
-                const soundEffect = new Audio(require("../../assets/no.mp3"))
-                soundEffect.play()
+                const soundEffect = new Audio(no)
+                await soundEffect.play()
                 canClick.value = true
             }
         }
