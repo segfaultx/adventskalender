@@ -1,47 +1,47 @@
 [[
-    {"day": 2, "content": "blup", "voucherName":  "gutschein_02.pdf"},
-    {"day": 20, "content": "blup", "voucherName":  "gutschein_20.pdf"},
+    {"day": 2, "content": "blup", "voucherName":  "gutschein_02.pdf", "backgroundImage":  "door_02.jpg"},
+    {"day": 20, "content": "blup", "voucherName":  "gutschein_20.pdf", "backgroundImage": "door_20.jpg"},
     null,
-    {"day": 7, "content": "blup", "voucherName":  "gutschein_07.pdf"},
+    {"day": 7, "content": "blup", "voucherName":  "gutschein_07.pdf", "backgroundImage": "door_07.jpg"},
     null,
-    {"day": 4, "content": "blup", "voucherName":  "gutschein_04.pdf"}],
+    {"day": 4, "content": "blup", "voucherName":  "gutschein_04.pdf", "backgroundImage": "door_04.jpg"}],
   [
     null,
-    {"day": 15, "content": "blup", "voucherName":  "gutschein_15.pdf"},
-    {"day": 18, "content": "blup", "voucherName":  "gutschein_18.pdf"},
-    {"day": 24, "content": "blup"},
-    {"day": 17, "content": "blup", "voucherName":  "gutschein_17.pdf"},
+    {"day": 15, "content": "blup", "voucherName":  "gutschein_15.pdf", "backgroundImage": "door_15.jpg"},
+    {"day": 18, "content": "blup", "voucherName":  "gutschein_18.pdf", "backgroundImage": "door_18.jpg"},
+    {"day": 24, "content": "blup", "backgroundImage": "door_24.jpg"},
+    {"day": 17, "content": "blup", "voucherName":  "gutschein_17.pdf", "backgroundImage": "door_17.jpg"},
     null
     ],
   [
-      {"day": 9, "content": "blup", "voucherName":  "gutschein_09.pdf"},
+      {"day": 9, "content": "blup", "voucherName":  "gutschein_09.pdf", "backgroundImage": "door_09.jpg"},
       null,
-      {"day": 23, "content": "blup", "voucherName":  "gutschein_23.pdf"},
-      {"day": 5, "content": "blup", "voucherName":  "gutschein_05.pdf"},
+      {"day": 23, "content": "blup", "voucherName":  "gutschein_23.pdf", "backgroundImage": "door_23.jpg"},
+      {"day": 5, "content": "blup", "voucherName":  "gutschein_05.pdf", "backgroundImage": "door_05.jpg"},
       null,
-      {"day": 10, "content": "blup", "voucherName":  "gutschein_10.pdf"}
+      {"day": 10, "content": "blup", "voucherName":  "gutschein_10.pdf", "backgroundImage": "door_10.jpg"}
   ],
   [
       null,
-      {"day": 13, "content": "blup", "voucherName":  "gutschein_13.pdf"},
-      {"day": 3, "content": "blup", "voucherName":  "gutschein_03.pdf"},
+      {"day": 13, "content": "blup", "voucherName":  "gutschein_13.pdf", "backgroundImage": "door_13.jpg"},
+      {"day": 3, "content": "blup", "voucherName":  "gutschein_03.pdf", "backgroundImage": "door_03.jpg"},
       null,
-    {"day": 12, "content": "blup", "voucherName":  "gutschein_12.pdf"},
+    {"day": 12, "content": "blup", "voucherName":  "gutschein_12.pdf", "backgroundImage": "door_12.jpg"},
       null],
   [
-      {"day": 6, "content": "blup"},
+      {"day": 6, "content": "blup", "backgroundImage": "door_06.jpg"},
       null,
-      {"day": 22, "content": "blup", "voucherName":  "gutschein_22.pdf"},
-      {"day": 16, "content": "blup", "voucherName":  "gutschein_16.pdf"},
+      {"day": 22, "content": "blup", "voucherName":  "gutschein_22.pdf", "backgroundImage": "door_22.jpg"},
+      {"day": 16, "content": "blup", "voucherName":  "gutschein_16.pdf", "backgroundImage": "door_16.jpg"},
       null,
-    {"day": 19, "content": "blup", "voucherName":  "gutschein_19.pdf"}],
+    {"day": 19, "content": "blup", "voucherName":  "gutschein_19.pdf", "backgroundImage": "door_19.jpg"}],
   [
-    {"day": 21, "content": "blup", "voucherName":  "gutschein_21.pdf"},
-    {"day": 11, "content": "blup", "voucherName":  "gutschein_11.pdf"},
+    {"day": 21, "content": "blup", "voucherName":  "gutschein_21.pdf", "backgroundImage": "door_21.jpg"},
+    {"day": 11, "content": "blup", "voucherName":  "gutschein_11.pdf", "backgroundImage": "door_11.jpg"},
     null,
-    {"day": 8, "content": "blup", "voucherName":  "gutschein_08.pdf"},
+    {"day": 8, "content": "blup", "voucherName":  "gutschein_08.pdf", "backgroundImage": "door_08.jpg"},
     {"day": 1, "content": "blup", "backgroundImage": "door_01.jpg"},
-    {"day": 14, "content": "blup", "voucherName":  "gutschein_14.pdf"}
+    {"day": 14, "content": "blup", "voucherName":  "gutschein_14.pdf", "backgroundImage": "door_14.jpg"}
   ]
 ]
 
