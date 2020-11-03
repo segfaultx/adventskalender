@@ -1,47 +1,49 @@
 [[
-    {"day": 2, "content": "blup", "voucherName":  "gutschein_02.pdf", "backgroundImage":  "door_02.jpg"},
-    {"day": 20, "content": "blup", "voucherName":  "gutschein_20.pdf", "backgroundImage": "door_20.jpg"},
+    {"day": 2, "content": "Weil du gerne Dokus guckst und ich nicht so sehr habe ich dir einen Gutschein für einen Doku Filmeabend gemacht, du kannst ihn via `Download` herunterladen.",
+      "voucherName":  "gutschein_02.pdf", "backgroundImage":  "door_02.jpg"},
+    {"day": 20, "content": "Stylischer Webauftritt? No Problemo, Matus macht das klar.", "voucherName":  "gutschein_20.pdf", "backgroundImage": "door_20.jpg"},
     null,
-    {"day": 7, "content": "blup", "voucherName":  "gutschein_07.pdf", "backgroundImage": "door_07.jpg"},
+    {"day": 7, "content": "Wenn du mal wieder lust hast frühstücken zu gehen.", "voucherName":  "gutschein_07.pdf", "backgroundImage": "door_07.jpg"},
     null,
-    {"day": 4, "content": "blup", "voucherName":  "gutschein_04.pdf", "backgroundImage": "door_04.jpg"}],
+    {"day": 4, "content": "Mhhhmm.. Nudeln (in Bad Soden!).", "voucherName":  "gutschein_04.pdf", "backgroundImage": "door_04.jpg"}],
   [
     null,
-    {"day": 15, "content": "blup", "voucherName":  "gutschein_15.pdf", "backgroundImage": "door_15.jpg"},
-    {"day": 18, "content": "blup", "voucherName":  "gutschein_18.pdf", "backgroundImage": "door_18.jpg"},
-    {"day": 24, "content": "blup", "backgroundImage": "door_24.jpg"},
-    {"day": 17, "content": "blup", "voucherName":  "gutschein_17.pdf", "backgroundImage": "door_17.jpg"},
+    {"day": 15, "content": "Falls ich mal wieder ein Muffel bin und du irgendwo hin magst.", "voucherName":  "gutschein_15.pdf", "backgroundImage": "door_15.jpg"},
+    {"day": 18, "content": "Wenn wir beide Faulis sein wollen, du aber lieber im Bett frühstücken willst.", "voucherName":  "gutschein_18.pdf", "backgroundImage": "door_18.jpg"},
+    {"day": 24, "content": "Palim, Palim.. Kalim, Kalim? Was macht wohl diese Geräusche.. (Teaser fürs Weihnachtsgeschenk)", "backgroundImage": "door_24.jpg"},
+    {"day": 17, "content": "Das ist immer gut.", "voucherName":  "gutschein_17.pdf", "backgroundImage": "door_17.jpg"},
     null
     ],
   [
-      {"day": 9, "content": "blup", "voucherName":  "gutschein_09.pdf", "backgroundImage": "door_09.jpg"},
+      {"day": 9, "content": "Ich hasse Aufräumen.. und wehre mich dagegen, hiermit hast du etwas gegen mich in der Hand.", "voucherName":  "gutschein_09.pdf", "backgroundImage": "door_09.jpg"},
       null,
-      {"day": 23, "content": "blup", "voucherName":  "gutschein_23.pdf", "backgroundImage": "door_23.jpg"},
-      {"day": 5, "content": "blup", "voucherName":  "gutschein_05.pdf", "backgroundImage": "door_05.jpg"},
+      {"day": 23, "content": "Du kannst den Film aussuchen, egal was. (Gilt nicht für Dokus! Dafür hast du einen extra Gutschein)", "voucherName":  "gutschein_23.pdf", "backgroundImage": "door_23.jpg"},
+      {"day": 5, "content": "Falls du mal wieder ein Tapi sehen willst.", "voucherName":  "gutschein_05.pdf", "backgroundImage": "door_05.jpg"},
       null,
-      {"day": 10, "content": "blup", "voucherName":  "gutschein_10.pdf", "backgroundImage": "door_10.jpg"}
+      {"day": 10, "content": "Oooh Kino, vielleicht ganz exquisit? Arthaus? Wer weiß.. du kannst's dir aussuchen!", "voucherName":  "gutschein_10.pdf", "backgroundImage": "door_10.jpg"}
   ],
   [
       null,
-      {"day": 13, "content": "blup", "voucherName":  "gutschein_13.pdf", "backgroundImage": "door_13.jpg"},
-      {"day": 3, "content": "blup", "voucherName":  "gutschein_03.pdf", "backgroundImage": "door_03.jpg"},
+      {"day": 13, "content": "Schnitzel? Cordon-Bleu? Was ganz anderes? Ich koche dir was!", "voucherName":  "gutschein_13.pdf", "backgroundImage": "door_13.jpg"},
+      {"day": 3, "content": "Du magst Museen sehr gerne, ich bin ein fauli. Hiermit kannst du dich zu einem tollen Museumsbesuch einladen lassen!", "voucherName":  "gutschein_03.pdf", "backgroundImage": "door_03.jpg"},
       null,
-    {"day": 12, "content": "blup", "voucherName":  "gutschein_12.pdf", "backgroundImage": "door_12.jpg"},
+    {"day": 12, "content": "Schwimmen, Schwimmen, Schwimmen. Wop. Du bestimmst.", "voucherName":  "gutschein_12.pdf", "backgroundImage": "door_12.jpg"},
       null],
   [
-      {"day": 6, "content": "blup", "backgroundImage": "door_06.jpg"},
+      {"day": 6, "content": "Gibt es Weihnachtsfüchse? Ich bin mir nicht sicher, aber ich habe dir einen besorgt. (Benötigt die physische Anwesenheit des Matus)", "backgroundImage": "door_06.jpg"},
       null,
-      {"day": 22, "content": "blup", "voucherName":  "gutschein_22.pdf", "backgroundImage": "door_22.jpg"},
-      {"day": 16, "content": "blup", "voucherName":  "gutschein_16.pdf", "backgroundImage": "door_16.jpg"},
+      {"day": 22, "content": "Golfen? In mini? Das kann nur gut sein.", "voucherName":  "gutschein_22.pdf", "backgroundImage": "door_22.jpg"},
+      {"day": 16, "content": "Lecker Japanisches Eis. Ich lad dich ein!", "voucherName":  "gutschein_16.pdf", "backgroundImage": "door_16.jpg"},
       null,
-    {"day": 19, "content": "blup", "voucherName":  "gutschein_19.pdf", "backgroundImage": "door_19.jpg"}],
+    {"day": 19, "content": "Matus macht sauber, no questions asked.", "voucherName":  "gutschein_19.pdf", "backgroundImage": "door_19.jpg"}],
   [
-    {"day": 21, "content": "blup", "voucherName":  "gutschein_21.pdf", "backgroundImage": "door_21.jpg"},
-    {"day": 11, "content": "blup", "voucherName":  "gutschein_11.pdf", "backgroundImage": "door_11.jpg"},
+    {"day": 21, "content": "Harry Potter? Oder auch was anderes, du kannst's dir aussuchen!", "voucherName":  "gutschein_21.pdf", "backgroundImage": "door_21.jpg"},
+    {"day": 11, "content": "Ich bin nicht der größte Animal Crossing Fan... hiermit komme ich mal die Insel besuchen.", "voucherName":  "gutschein_11.pdf", "backgroundImage": "door_11.jpg"},
     null,
-    {"day": 8, "content": "blup", "voucherName":  "gutschein_08.pdf", "backgroundImage": "door_08.jpg"},
-    {"day": 1, "content": "blup", "backgroundImage": "door_01.jpg"},
-    {"day": 14, "content": "blup", "voucherName":  "gutschein_14.pdf", "backgroundImage": "door_14.jpg"}
+    {"day": 8, "content": "Nom Nom Picknick, du darfs aussuchen wo's hingeht!", "voucherName":  "gutschein_08.pdf", "backgroundImage": "door_08.jpg"},
+    {"day": 1, "content": "Leider ist dein Schlüsselanhänger auf dem Weg verloren gegangen, deswegen habe ich dir einen neuen besorgt. (Benötigt die physische Anwesenheit des Matus)",
+      "backgroundImage": "door_01.jpg"},
+    {"day": 14, "content": "Wenn dir die Spiele ausgehen.. Bis 20€ kannst du dir was aussuchen!", "voucherName":  "gutschein_14.pdf", "backgroundImage": "door_14.jpg"}
   ]
 ]
 
