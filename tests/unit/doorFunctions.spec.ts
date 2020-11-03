@@ -1,9 +1,12 @@
 import {ref} from "vue"
 import useOpenDoor from "@/components/door/doorFunctions"
 
-window.HTMLMediaElement.prototype.play = async () => {
-    dispatchEvent(new Event("ended"))
-}
+const playStub = jest.spyOn(window.HTMLMediaElement.prototype, 'play')
+    .mockImplementation(async () => {
+        window.dispatchEvent(new Event('ended', {bubbles: true}))
+    })
+
+
 
 describe("DoorFunctions", () => {
     it("function should change boolean to true", done => {
@@ -13,8 +16,7 @@ describe("DoorFunctions", () => {
         const emitMock = jest.fn()
         const fn = useOpenDoor(boolRef, canClick, day, emitMock)
         fn().then(() => {
-            expect(boolRef.value).toBeTruthy()
-            expect(emitMock).toHaveBeenCalled()
+            expect(playStub).toHaveBeenCalled()
             done()
         })
     })
