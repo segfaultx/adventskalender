@@ -1,4 +1,4 @@
-import {shallowMount, mount} from "@vue/test-utils"
+import {shallowMount} from "@vue/test-utils"
 import DoorComponent from "@/components/door/DoorComponent.vue"
 import DoorItem from "@/components/door/DoorItem"
 jest.mock("@/components/door/doorFunctions.ts")
